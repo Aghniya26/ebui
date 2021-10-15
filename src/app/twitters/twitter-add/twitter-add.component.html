@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <h1>Add Tweet</h1><br>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-gorup">
+      <label for="">Name</label>
+      <input type="text" class="form-control" ngModel name="name">
+    </div>
+    <div class="form-gorup">
+      <label for="">Username</label>
+      <input type="text" class="form-control" ngModel name="username">
+    </div>
+    <div class="form-gorup">
+      <label for="">Tweet</label>
+      <input type="text" class="form-control" ngModel name="text">
+    </div>
+    <div class="form-gorup">
+      <label for="">link Image</label>
+      <input type="text" class="form-control" ngModel name="link_image">
+    </div>
+    <div class="form-gorup">
+      <label for="">Reply</label>
+      <input type="number" class="form-control" ngModel name="reply">
+    </div>
+    <div class="form-gorup">
+      <label for="">Like</label>
+      <input type="number" class="form-control" ngModel name="like">
+    </div>
+    <div class="form-gorup">
+      <label for="">Retweet</label>
+      <input type="number" class="form-control" ngModel name="retweet">
+    </div><br>
+    <div class="form-gorup">
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+  </form>
+
+</div>
+

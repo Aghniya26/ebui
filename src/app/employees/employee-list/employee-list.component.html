@@ -1,0 +1,77 @@
+<!-- <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Employee List</h2>
+    <div class="flex-shrink"><a (click)="addEmployee()" class="btn btn-primary" >Add Employee</a></div>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of result ">
+          <td>{{employee.first_name}}</td>
+          <td>{{employee.last_name}}</td>
+          <td>{{employee.email}}</td>
+          <td><button (click)="deleteEmp(employee.id)" class="btn btn-danger">Delete</button>
+              <button (click)="detailEmp(employee.id)" class="btn btn-success" style="margin-left: 10px">Details</button>
+              <button (click)="updateEmp(employee.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body style="background-color: #edf2f7;">
+
+
+    <div class="title d-flex" style="padding-left: 2%; padding-right: 2%;">
+      <p  class="mr-auto p-2" >result {{itemsPerPage}}</p>
+      <button type="button" class="btn btn-1 p-2" (click)="addEmployee()">Add Employee +</button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 md-grid p-3" *ngFor="let employee of result | paginate
+        : {
+            itemsPerPage: itemsPerPage,
+            currentPage: page,
+            totalItems: totalItems
+          }
+        " >
+          <div class="card">
+            <div class="p-2 dots">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+            </div>
+           <img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg" class="avatar" >
+           <div class="card-body">
+             <div class="card-title mdt-1">{{employee.first_name}} </div>
+             <div class="card-text mdt-2">{{employee.email}}</div>
+           </div>
+           <a href="#" class="btn-color "><p class="btn-font">View Profile</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <pagination-controls
+     class="pagi text-center"
+     (pageChange)="page = $event"
+   ></pagination-controls>
+
+  </body>
+</html>

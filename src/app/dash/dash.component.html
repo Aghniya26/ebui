@@ -1,0 +1,90 @@
+<html>
+  <head>
+
+  </head>
+  <body style="background-color: #edf2f7;">
+    <div class="grid-container">
+      <mat-grid-list cols="{{ ( cardLayout | async )?.summaryColumns }}" rowHeight="200px">
+          <!--Mini Cards-->
+          <mat-grid-tile *ngFor="let i of [1, 2, 3, 4]" [colspan]="( cardLayout | async )?.miniCard?.cols" [rowspan]="( cardLayout | async )?.miniCard?.rows">
+              <app-card title="">
+                  <app-mini1></app-mini1>
+              </app-card>
+          </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="{{ ( cardLayout | async )?.contentColumns }}" rowHeight="200px">
+          <!-- Histogram -->
+          <mat-grid-tile [colspan]="( cardLayout | async )?.table?.cols" [rowspan]="( cardLayout | async )?.table?.rows">
+            <app-card title="Histogram">
+                <app-histogram></app-histogram>
+            </app-card>
+          </mat-grid-tile>
+        <!-- Media Shares -->
+          <mat-grid-tile  [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+                <app-card title="Media Shares">
+                  <app-donut></app-donut>
+                </app-card>
+          </mat-grid-tile>
+          <!-- News Uploaded -->
+          <mat-grid-tile [colspan]="( cardLayout | async )?.table?.cols" [rowspan]="( cardLayout | async )?.table?.rows">
+            <app-card title="News Uploaded">
+                <app-news-table></app-news-table>
+            </app-card>
+          </mat-grid-tile>
+          <!-- My topic -->
+          <mat-grid-tile  [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+            <app-card title="My topic">
+                <app-mytopics></app-mytopics>
+            </app-card>
+          </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+<!-- <md-card>
+  <md-card-header>
+      <md-card-title> Title </md-card-title>
+      <md-card-subtitle> Subtitle</md-card-subtitle>
+  </md-card-header>
+  <div fxLayout="row">
+  <img md-card-image src="" fxFlex="25">
+      <span fxFlex="10"></span>
+  <md-card-content fxFlex="65">
+      <p>
+         content
+      </p>
+  </md-card-content>
+  </div>
+  <md-card-actions>
+      <button md-button>Action 1</button>
+      <button md-button>Action 2</button>
+  </md-card-actions>
+</md-card> -->
+
+  <!-- <mat-grid-list cols="3" rowHeight="400px">
+    <mat-grid-tile *ngFor="let card of contentCards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Card Content Here</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list> -->
+

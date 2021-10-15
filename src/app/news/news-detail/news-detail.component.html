@@ -1,0 +1,27 @@
+
+
+<div class="rounded-xl shadow-xl " *ngFor="let item of result" >
+  <img class="rounded-t-xl  w-full h-50 " [src]="item.link_image">
+  <div class="flex flex-col p-7">
+      <div class="flex flex-row">
+          <div class=" text-xs uppercase bg-yellow-100 p-1 px-2 text-yellow-700 rounded-2xl">Politics</div>
+      </div>
+      <h2 class="text-xl font-bold truncate mt-1">{{item.title_news}}</h2>
+      <p class="text-base text-gray-600 mt-1">{{item.content }}</p>
+      <div class="flex flex-row mt-5 items-center justify-start">
+          <p class="font-bold text-sm mr-2">{{item.media_name}}</p>
+          <p class="text-gray-400 text-sm"> {{item.date}}</p>
+      </div>
+  </div>
+</div>
+
+<div class="flex flex-row Button p-7">
+  <button (click)="updateNews()" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full buttonSpace">
+    Update
+  </button>
+  <button (click)="deleteNews()" class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full buttonSpace">
+    Delete
+  </button>
+</div>
+
+

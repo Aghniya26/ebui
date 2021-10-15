@@ -1,0 +1,83 @@
+<!-- <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Twitter List</h2>
+    <div class="flex-shrink"><a (click)="addTwt()" class="btn btn-primary" >Add Tweet</a></div>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let twt of result ">
+          <td>{{twt.name}}</td>
+          <td>{{twt.username}}</td>
+          <td>{{twt.date}}</td>
+          <td><button (click)="deleteTwt(twt.id)" class="btn btn-danger">Delete</button>
+              <button (click)="detailTwt(twt.id)" class="btn btn-success" style="margin-left: 10px">Details</button>
+              <button (click)="updateTwt(twt.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body style="background-color: #edf2f7;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 p-2" *ngFor="let twt of result | paginate
+       : {
+           itemsPerPage: itemsPerPage,
+           currentPage: page,
+           totalItems: totalItems
+         }
+       " >
+          <div class="card p-3 mb-2">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg" class="avatar" >
+                    <div class="ms-2 c-details">
+                      <div class="d-flex flex-row align-items-center">
+                        <p class="tb-1 p-1">{{twt.name}}</p>
+                        <p class="tb-2 p-1">@{{twt.username}}</p>
+                      </div>
+                        <span class="tb-3">Jakarta, Indonesia </span>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                </svg>
+            </div>
+            <div class="mt-1">
+              <h3 class="text-1">{{twt.text}}</h3>
+              <div class="mt-1">
+                  <div class="img-rounded">
+                    <img src="https://wallpaperaccess.com/full/2514219.jpg" style="border-radius: 15px; padding: 5px;">
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+          </div>
+
+      </div>
+       <!-- pagination -->
+   <pagination-controls
+   class="pagi text-center"
+   (pageChange)="page = $event"
+ ></pagination-controls>
+
+  </body>
+</html>
+

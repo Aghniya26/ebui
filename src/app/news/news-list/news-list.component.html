@@ -1,0 +1,124 @@
+<!--
+<div class="flex flex-row md:space-x-8">
+  <div class="flex-shrink"><a (click)="addNews()" class="btn btn-primary" >Add News</a></div>
+  <div class="flex-grow"><input class="form-control" type="text" name="inputSearch" [(ngModel)]="inputSearch" (ngModelChange)="searchByTitle()"
+    placeholder="Search here..."></div>
+</div>
+
+
+<div class="grid grid-row-3 p-8 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"  >
+<div class="rounded-xl shadow-xl transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out "
+*ngFor="let item of result | paginate
+: {
+    itemsPerPage: itemsPerPage,
+    currentPage: page,
+    totalItems: totalItems
+  }
+"  (click)="detailNews(item.id)" >
+  <img class="rounded-t-xl  w-full h-36 object-cover" [src]="item.link_image">
+  <div class="flex flex-col p-7">
+      <div class="flex flex-row">
+          <div class=" text-xs uppercase bg-yellow-100 p-1 px-2 text-yellow-700 rounded-2xl">Politics</div>
+      </div>
+      <h2 class="text-xl font-bold truncate mt-1">{{item.title_news}}</h2>
+      <p class="text-base text-gray-600 mt-1">{{item.content | slice: 0:100 }}</p>
+      <div class="flex flex-row mt-5 items-center justify-between">
+          <p class="font-bold text-sm mr-2">{{item.media_name}}</p>
+          <p class="text-gray-400 text-sm"> {{formatDate([item.date])}}</p>
+      </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+<pagination-controls
+  class="pagi text-center"
+  (pageChange)="page = $event"
+></pagination-controls>
+
+ -->
+ <html>
+   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      </head>
+   <body style="background-color: #edf2f7;">
+     <!-- title -->
+    <div class="title d-flex" style="padding-left: 2%; padding-right: 2%;">
+      <p  class="mr-auto p-2" >Explore Channels</p>
+      <button type="button" class="btn btn-1 p-2" (click)="addNews()">Add News +</button>
+    </div>
+     <!-- media news card -->
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-2 md-grid" *ngFor="let item of data">
+           <div class="card">
+            <img [src]="'assets/news_media/'+item.img" class="img-md">
+            <div class="card-body">
+              <div class="card-title mdt-1">{{item.name}}</div>
+              <div class="card-text mdt-2">{{item.views}}</div>
+            </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+    <!-- title -->
+    <div class="title" style="padding-left: 2%;">
+      <p>Kompas Headline</p>
+    </div>
+
+    <!-- news card -->
+    <div class="container">
+     <div class="row">
+       <div class="col-sm-4 p-2" *ngFor="let item of result | paginate
+       : {
+           itemsPerPage: itemsPerPage,
+           currentPage: page,
+           totalItems: totalItems
+         }
+       " >
+         <div class="card">
+           <div class="d-flex">
+             <img [src]="item.link_image" class="rounded img-1" >
+           <div class="card-body">
+             <h5 class="card-title t-1">{{item.title_news}}</h5>
+             <p class="card-text t-2">{{item.content | slice: 0:50 }}</p>
+           </div>
+           </div>
+           <div class="d-flex mb-3">
+             <div class="p-1"><span class="badge bg-primary f-b">{{item.media_name}}</span></div>
+             <div class="p-1"><span class="badge bg-secondary f-b">Politics</span></div>
+             <div class="ml-auto p-1 date-1">{{formatDate([item.date])}}</div>
+         </div>
+         </div>
+       </div>
+
+     </div>
+
+   </div>
+
+   <!-- pagination -->
+   <pagination-controls
+     class="pagi text-center"
+     (pageChange)="page = $event"
+   ></pagination-controls>
+
+   </body>
+ </html>
+
+
+<!-- <div class="container">
+  <table>
+  <td><img src="https://material.angular.io/assets/img/examples/shiba2.jpg" style="width: 150px; height: 150px;"></td>
+  <td>
+    <tr>jsabjasbjasbdhjs</tr>
+    <tr>jsabjasbjasbdhjs</tr>
+    <tr>jsabjasbjasbdhjs</tr>
+  </td>
+  </table>
+</div> -->

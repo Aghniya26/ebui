@@ -1,0 +1,35 @@
+.container{
+  text-align: right;
+}.t-1{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.02em;
+
+color: #778192;
+}.t-2{
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 35px;
+letter-spacing: 0.02em;
+
+color: #0F123F;
+
+}.t-3{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+text-align: right;
+letter-spacing: 0.02em;
+
+color: #45D0AA;
+}.icon-1{
+  width: 53px;
+height: 53px;
+}

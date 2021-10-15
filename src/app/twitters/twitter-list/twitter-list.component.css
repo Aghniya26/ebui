@@ -1,0 +1,132 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+body {
+  background-color: #eee
+}
+
+.card {
+  border: none;
+  border-radius: 10px
+}
+
+.c-details span {
+  font-weight: 300;
+  font-size: 13px
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 39px
+}
+
+.badge span {
+  background-color: #fffbec;
+  width: 60px;
+  height: 25px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: #fed85d;
+  justify-content: center;
+  align-items: center
+}
+
+.img-rounded {
+  border-radius: 10px
+}
+
+.progress div {
+  background-color: red
+}
+
+.text1 {
+  font-size: 14px;
+  font-weight: 600
+}
+
+.text2 {
+  color: #a5aec0
+}.avatar {
+  border-radius: 50%;
+  width: 32px;
+height: 32px;
+}.tb-1{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 15px;
+
+color: #0F123F;
+
+}.tb-2{
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 11px;
+line-height: 13px;
+/* identical to box height */
+
+
+color: #778192;
+}.tb-3{
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 11px;
+line-height: 13px;
+/* identical to box height */
+
+
+color: #778192;
+}.text-1{
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 11px;
+line-height: 18px;
+/* or 164% */
+
+
+color: #0F123F;
+
+}

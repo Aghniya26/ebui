@@ -1,0 +1,27 @@
+
+<div class="container mt-5">
+  <h2>Add News</h2>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-gorup">
+      <label for="">Title</label>
+      <input type="text" class="form-control" ngModel name="title_news">
+    </div>
+    <div class="form-gorup">
+      <label for="">Image</label>
+      <input type="text" class="form-control" ngModel name="link_image">
+    </div>
+    <div class="form-gorup">
+      <label for="">Content</label>
+      <input type="text" class="form-control" ngModel name="content" style="height: 185px;">
+    </div>
+    <div class="form-gorup">
+      <label for="">Media</label>
+      <input type="text" class="form-control" ngModel name="media_name" >
+    </div>
+    <div class="form-gorup">
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+  </form>
+
+</div>

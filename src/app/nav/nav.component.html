@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #drawer class="sidenav" fixedInViewport
+          [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+          [mode]="(isHandset$ | async) ? 'over' : 'side'"
+          [opened]="(isHandset$ | async) === false">
+        <mat-toolbar class="list"><img [src]="logo"></mat-toolbar>
+        <br><br>
+        <mat-nav-list>
+          <a class="list" *ngFor="let item of menuItems" mat-list-item
+          [routerLink]="'/'+item.url"><img [src]="'assets/dashboard/'+item.icon" class="p-2">{{item.url|titlecase}}</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content >
+        <mat-toolbar class="toolbar d-flex" >
+          <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <!-- <mat-icon aria-label="Side nav toggle icon">Dashboard</mat-icon>
+          <mat-icon aria-label="Side nav toggle icon">Employee</mat-icon>
+          <mat-icon aria-label="Side nav toggle icon">Twitter</mat-icon>
+          <mat-icon aria-label="Side nav toggle icon">News</mat-icon> -->
+        </button>
+            <span class="toolbar-text mr-auto p-2">Dashboard</span>
+
+              <div class="p-2"><img [src]="search"></div>
+              <div class="p-2"><img [src]="bell"></div>
+              <div class="p-2"><img [src]="line"></div>
+              <div class="p-2 toolbar-text-1 ">Samantha</div>
+              <div class="p-2"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg" class="avatar"></div>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+  </body>
+</html>

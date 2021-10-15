@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <h1>Update Employee</h1><br>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-gorup">
+      <label for="">First Name</label>
+      <input type="text" class="form-control" ngModel name="first_name">
+    </div>
+    <div class="form-gorup">
+      <label for="">Last Name</label>
+      <input type="text" class="form-control" ngModel name="last_name">
+    </div>
+    <div class="form-gorup">
+      <label for="">Email</label>
+      <input type="text" class="form-control" ngModel name="email">
+    </div>
+    <div class="form-gorup">
+      <label for="">Phone</label>
+      <input type="number" class="form-control" ngModel name="phone">
+    </div>
+    <div class="form-gorup">
+      <label for="">Organization</label>
+      <input type="text" class="form-control" ngModel name="organization">
+    </div>
+    <div class="form-gorup">
+      <label for="">Designation</label>
+      <input type="text" class="form-control" ngModel name="designation">
+    </div>
+    <div class="form-gorup">
+      <label for="">Salary</label>
+      <input type="text" class="form-control" ngModel name="salary">
+    </div><br>
+    <div class="form-gorup">
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </form>
+
+</div>
+

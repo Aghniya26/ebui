@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h2>Update News</h2>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" *ngFor="let item of result">
+    <div class="form-gorup">
+      <label for="">Title</label>
+      <input type="text" class="form-control" [ngModel]="item.title_news" name="title_news">
+    </div>
+    <div class="form-gorup">
+      <label for="">Image</label>
+      <input type="text" class="form-control" [ngModel]="item.link_image" name="link_image">
+    </div>
+    <div class="form-gorup">
+      <label for="">Content</label>
+      <input type="text" class="form-control" [ngModel]="item.content" name="content">
+    </div>
+    <div class="form-gorup">
+      <label for="">Media</label>
+      <input type="text" class="form-control" [ngModel]="item.media_name" name="media_name">
+    </div>
+    <div class="form-gorup">
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </form>
+
+</div>
+

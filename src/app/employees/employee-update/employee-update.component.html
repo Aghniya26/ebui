@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <h1>Update Employee</h1><br>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" *ngFor="let item of result">
+    <div class="form-gorup">
+      <label for="">First Name</label>
+      <input type="text" class="form-control" [ngModel]="item.first_name" name="first_name">
+    </div>
+    <div class="form-gorup">
+      <label for="">Last Name</label>
+      <input type="text" class="form-control" [ngModel]="item.last_name" name="last_name">
+    </div>
+    <div class="form-gorup">
+      <label for="">Email</label>
+      <input type="text" class="form-control" [ngModel]="item.email" name="email">
+    </div>
+    <div class="form-gorup">
+      <label for="">Phone</label>
+      <input type="text" class="form-control" [ngModel]="item.phone" name="phone">
+    </div>
+    <div class="form-gorup">
+      <label for="">Organization</label>
+      <input type="text" class="form-control" [ngModel]="item.organization" name="organization">
+    </div>
+    <div class="form-gorup">
+      <label for="">Designation</label>
+      <input type="text" class="form-control" [ngModel]="item.designation" name="designation">
+    </div>
+    <div class="form-gorup">
+      <label for="">Salary</label>
+      <input type="text" class="form-control" [ngModel]="item.salary" name="salary">
+    </div><br>
+    <div class="form-gorup">
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </form>
+
+</div>
+

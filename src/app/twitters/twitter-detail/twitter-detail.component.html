@@ -1,0 +1,35 @@
+<table class="table table-striped" *ngFor="let twt of result ">
+  <tr>
+    <td>Name</td><td>{{twt.name}} </td>
+  </tr>
+
+  <tr>
+    <td>Username</td><td>{{twt.username}}</td>
+  </tr>
+
+  <tr>
+    <td>Date</td><td>{{twt.date}}</td>
+  </tr>
+
+  <tr>
+    <td>Text</td><td>{{twt.text}}</td>
+  </tr>
+
+  <tr>
+    <td>Image</td><td><img [src]="twt.link_image" width="100" height="100"></td>
+  </tr>
+
+  <tr>
+    <td>Reply</td><td>{{twt.reply}}</td>
+  </tr>
+
+  <tr>
+    <td>Like</td><td>{{twt.like}}</td>
+  </tr>
+
+  <tr>
+    <td>Retweet</td><td>{{twt.retweet}}</td>
+  </tr>
+
+</table>
+

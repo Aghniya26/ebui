@@ -1,0 +1,40 @@
+<div class="table-wrapper">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">News</th>
+      <th scope="col">Date</th>
+      <th scope="col">Source</th>
+      <th scope="col">Views</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of result | paginate
+    : {
+        itemsPerPage: itemsPerPage,
+        currentPage: page,
+        totalItems: totalItems
+      }
+    ">
+      <td >
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item"> <img [src]="item.link_image" class="mr-2" style="width: 30px; height: 30px;"></li>
+          <li class="list-group-item">      {{item.title_news}}</li>
+        </ul>
+      </td>
+      <td>{{formatDate([item.date])}}</td>
+      <td>{{item.media_name}}</td>
+      <td>1.200</td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <pagination-controls
+    class="pagi text-center"
+    (pageChange)="page = $event"
+  ></pagination-controls>
+</div>
+
+
+

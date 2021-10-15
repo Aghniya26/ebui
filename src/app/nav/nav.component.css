@@ -1,0 +1,61 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background:
+  #0F123F;
+
+
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}.color-nav{
+  background:
+  #0F123F;
+}.list{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+
+  color: #FFFFFF;
+}.toolbar{
+  background: #edf2f7;
+}.toolbar-text{
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+
+color: #0F123F;
+}.toolbar-text-1{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  letter-spacing: 0.4px;
+
+  /* Light Mode/Black */
+
+  color: #252733;
+}.avatar{
+  width: 36px;
+height: 36px;
+border-radius: 24px;
+}

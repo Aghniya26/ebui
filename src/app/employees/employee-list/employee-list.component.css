@@ -1,5 +1,3 @@
-
-
 .social-link {
   width: 30px;
   height: 30px;
@@ -13,11 +11,13 @@
   font-size: 0.9rem;
 }
 
-.social-link:hover, .social-link:focus {
+.social-link:hover,
+.social-link:focus {
   background: #ddd;
   text-decoration: none;
   color: #555;
-}.avatar {
+}
+.avatar {
   vertical-align: middle;
   border-radius: 50%;
   width: 60px;
@@ -25,61 +25,63 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-}.card{
+}
+.card {
   border-radius: 10px 10px 10px 10px;
-}.btn-color{
-  background: linear-gradient(128.58deg, #0F123F 14.67%, #3A408F 86.8%);
-border-radius: 0px 0px 10px 10px;
-height: 44px;
-}.btn-font{
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 15px;
-letter-spacing: 0.02em;
-text-align: center;
-vertical-align: middle;
-color: #FFFFFF;
-padding-top: 10px;
-
-}.mdt-1{
-
+}
+.btn-color {
+  background: linear-gradient(128.58deg, #0f123f 14.67%, #3a408f 86.8%);
+  border-radius: 0px 0px 10px 10px;
+  height: 80px;
+}
+.btn-font {
   font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
-
-
-color: #0F123F;
-}mdt-2{
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 13px;
-line-height: 15px;
-
-color: #0F123F;
-
-}.card-body{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
   text-align: center;
-}.dots{
-
-  text-align: center;
-}.result-font{
+  vertical-align: middle;
+  color: #ffffff;
+  padding-top: 10px;
+}
+.mdt-1 {
   font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
 
-color: #0F123F;
+  color: #0f123f;
+}
+mdt-2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
 
-}.btn-1{
-  background: linear-gradient(90deg, #FF6968 0%, #FFA3A3 100%);
+  color: #0f123f;
+}
+.card-body {
+  text-align: center;
+}
+.dots {
+  text-align: center;
+}
+.result-font {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+
+  color: #0f123f;
+}
+.btn-1 {
+  background: linear-gradient(90deg, #ff6968 0%, #ffa3a3 100%);
   box-shadow: 0px 20px 70px rgba(86, 89, 146, 0.1);
   border-radius: 10px;
   font-family: Roboto;
@@ -90,8 +92,5 @@ color: #0F123F;
   /* identical to box height, or 154% */
   vertical-align: middle;
 
-
-  color: #FFFFFF;
-  }
-
-
+  color: #ffffff;
+}

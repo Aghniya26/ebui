@@ -43,7 +43,7 @@ export class EmployeeUpdateComponent implements OnInit {
       data=>{
         console.log(data);
       })
-    this.router.navigateByUrl('emp')
+    this.router.navigateByUrl('employee')
 
   }
 

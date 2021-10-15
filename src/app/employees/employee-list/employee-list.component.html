@@ -62,7 +62,13 @@
              <div class="card-title mdt-1">{{employee.first_name}} </div>
              <div class="card-text mdt-2">{{employee.email}}</div>
            </div>
-           <a href="#" class="btn-color "><p class="btn-font">View Profile</p></a>
+           <a href="#" class="btn-color ">
+             <p class="btn-font">View Profile</p>
+             <p class="btn-font" (click)="updateEmp(employee.id)">Update</p>
+             <p class="btn-font" (click)="deleteEmp(employee.id)">Delete</p>
+            </a>
+
+
           </div>
         </div>
       </div>
